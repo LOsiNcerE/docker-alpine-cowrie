@@ -1,5 +1,5 @@
 FROM alpine:3.8 as builder
-MAINTAINER Michel Oosterhof <michel@oosterhof.net>
+MAINTAINER LOsiNcerE
 RUN addgroup -S -g 1000 cowrie && \
     adduser -S -u 1000 -h /cowrie -s /bin/sh -G cowrie cowrie
 
@@ -21,7 +21,7 @@ RUN su - cowrie -c "\
         rm -r ~/.cache/pip"
 
 FROM alpine:3.8
-MAINTAINER Michel Oosterhof <michel@oosterhof.net>
+MAINTAINER LOsiNcerE
 RUN addgroup -S -g 1000 cowrie && \
     adduser -S -u 1000 -h /cowrie -G cowrie cowrie
 
